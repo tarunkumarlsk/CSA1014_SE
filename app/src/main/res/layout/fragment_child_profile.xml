@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_parent"
+            android:background="#E0E7FF"
+            android:padding="24dp"
+            app:tint="#4F46E5"
+            app:shapeAppearanceOverlay="@style/CircleImage"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/tv_child_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Child Profile"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_device_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Device"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- AI Safety Score Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+                
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/rounded_logo_bg"
+                    android:backgroundTint="#EEF2FF">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_shield"
+                        app:tint="#4F46E5"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current AI Safety Score"
+                        android:textSize="13sp"
+                        android:textColor="#6B7280"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:letterSpacing="0.05"/>
+                        
+                    <TextView
+                        android:id="@+id/tv_ai_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Score: —"
+                        android:textSize="20sp"
+                        android:textColor="#111827"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_ai_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status: Pending"
+                        android:textSize="14sp"
+                        android:textColor="#6B7280"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+                <!-- Status Dot indicator -->
+                <View
+                    android:id="@+id/view_ai_status_dot"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:background="@drawable/rounded_logo_bg"
+                    android:backgroundTint="#D1D5DB"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:text="Logout"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#FEF2F2"
+            android:textColor="#EF4444"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+    </LinearLayout>
+</ScrollView>

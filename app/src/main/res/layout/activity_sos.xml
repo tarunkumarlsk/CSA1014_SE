@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EF4444"
+    tools:context=".SOSActivity">
+
+    <!-- Circle background decorations -->
+    <View
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:background="@drawable/rounded_logo_bg"
+        android:backgroundTint="#FFFFFF"
+        android:alpha="0.05"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@drawable/rounded_logo_bg"
+        android:backgroundTint="#FFFFFF"
+        android:alpha="0.05"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <!-- Icon -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/icon_container"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="70dp"
+        app:cardElevation="16dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_error"
+            app:tint="#EF4444" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Text Content -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="SOS Alert Sent!"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_container" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Your parent has been notified of your location and emergency status."
+        android:textColor="#FFFFFF"
+        android:alpha="0.9"
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_stop_alert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <!-- Stop Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_stop_alert"
+        android:layout_width="240dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:text="Stop Alert"
+        android:textAllCaps="false"
+        android:textColor="#EF4444"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="32dp"
+        app:icon="@drawable/ic_close"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        app:iconTint="#EF4444"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
